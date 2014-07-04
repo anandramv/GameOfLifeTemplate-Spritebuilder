@@ -10,11 +10,14 @@
 
 @implementation Creature
 
-//State of the creature
-@property(nonatomic,assign) BOOL isAlive;
 
-//Amount of living Neighbours
-@property(nonatomic,assign) NSInteger* livingNeighbours;
-
+-(id)init{
+    self=[super initWithImageNamed:@"GameOfLifeAssets/Assets/bubble.png"];
+    
+    if(self){
+        self.isAlive=NO;
+    }
+    return self;
+}
 
 @end

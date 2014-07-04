@@ -10,4 +10,12 @@
 
 @interface Creature : CCSprite
 
+//State of the creature
+@property(nonatomic,assign) BOOL isAlive;
+
+//Amount of living Neighbours
+@property(nonatomic,assign) NSInteger* livingNeighbours;
+
+-(id) initCreature;
+
 @end
