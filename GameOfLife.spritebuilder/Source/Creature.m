@@ -11,13 +11,21 @@
 @implementation Creature
 
 
--(id)init{
+-(id)initCreature{
     self=[super initWithImageNamed:@"GameOfLifeAssets/Assets/bubble.png"];
     
     if(self){
         self.isAlive=NO;
     }
     return self;
+}
+
+-(void)setIsAlive:(BOOL)newState{
+    
+    _isAlive=newState;
+    
+    self.visible=_isAlive;
+    
 }
 
 @end
