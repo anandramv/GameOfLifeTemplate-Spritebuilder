@@ -35,11 +35,11 @@ float _cellHeight;
     
     _gridArray=[NSMutableArray array];
     
-    for(int i;i<GIRD_ROWS;i++){
+    for(int i=0;i<GIRD_ROWS;i++){
         _gridArray[i]=[NSMutableArray array];
         x=0;
         
-        for(int j;j<GIRD_COLUMNS;j++){
+        for(int j=0;j<GIRD_COLUMNS;j++){
             Creature *creature=[[Creature alloc]init];
             creature.anchorPoint=ccp(0,0);
             creature.position=ccp(x,y);
