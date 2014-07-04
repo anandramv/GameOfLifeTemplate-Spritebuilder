@@ -40,7 +40,7 @@ float _cellHeight;
         x=0;
         
         for(int j=0;j<GIRD_COLUMNS;j++){
-            Creature *creature=[[Creature alloc]init];
+            Creature *creature=[[Creature alloc]initCreature];
             creature.anchorPoint=ccp(0,0);
             creature.position=ccp(x,y);
             [self addChild:creature];
