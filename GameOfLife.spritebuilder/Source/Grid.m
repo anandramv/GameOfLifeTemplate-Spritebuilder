@@ -47,7 +47,6 @@ float _cellHeight;
             
             
             _gridArray[i][j]=creature;
-            creature.isAlive=YES;
             x+=_cellWidth;
         }
         y+=_cellHeight;
@@ -56,4 +55,19 @@ float _cellHeight;
 }
 
 
+- (void)touchBegan:(UITouch *)touch withEvent:(UIEvent *)event{
+    CGPoint touchlocation=[touch locationInNode:self];
+    Creature* creature=[self creatureForTouchPosition:touchlocation];
+    creature.isAlive=!creature.isAlive;
+}
+
+- (Creature *)creatureForTouchPosition:(CGPoint)touchPosition
+{
+    //get the row and column that was touched, return the Creature inside the corresponding cell
+    int row=touchPosition.y/self.contentSize.height;
+    int column=touchPosition.x/self.contentSize.width;
+    
+    return _gridArray[row][column];
+    
+}
 @end
