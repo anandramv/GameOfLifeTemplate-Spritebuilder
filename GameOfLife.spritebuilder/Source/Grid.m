@@ -64,8 +64,8 @@ float _cellHeight;
 - (Creature *)creatureForTouchPosition:(CGPoint)touchPosition
 {
     //get the row and column that was touched, return the Creature inside the corresponding cell
-    int row=touchPosition.y/self.contentSize.height;
-    int column=touchPosition.x/self.contentSize.width;
+    int row=self.contentSize.height/touchPosition.y;
+    int column=self.contentSize.width/touchPosition.x;
     
     return _gridArray[row][column];
     
