@@ -14,7 +14,7 @@
 @property(nonatomic,assign) BOOL isAlive;
 
 //Amount of living Neighbours
-@property(nonatomic,assign) NSInteger* livingNeighbours;
+@property(nonatomic,assign) int livingNeighbours;
 
 -(id) initCreature;
 
