@@ -142,7 +142,7 @@ float _cellHeight;
             }
         }
     }
-    
+    _totalAlive=aliveCreaturesCount;
 }
 
 
